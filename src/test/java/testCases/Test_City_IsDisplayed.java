@@ -1,26 +1,21 @@
 package testCases;
 
-
-
-
 import org.openqa.selenium.By;
+
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
 
 import base.BaseClass;
 
-
-
-
 public class Test_City_IsDisplayed extends BaseClass {
-
+	
 	@Test // Chose Furniture
 	public static void verifyTest_City_IsDisplayed() {;
 		elementClick(By.xpath("//a[@href='/d/furniture/search/fua']"));
 		System.out.println("Click CL logo to open Landing page");
 		
-		log.debug("Click CL logo to open Landing page");
+		log.debug("Click CL logo to open Landing page >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 		/*
 		Reporter.log("Verified Test - City Is Displayed  -- ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ");
 		Reporter.log("#############################################################################################");
@@ -34,7 +29,7 @@ public class Test_City_IsDisplayed extends BaseClass {
 		// select Austin
 		*/
 		boolean City = driver.findElement(By.xpath(or.getProperty("CITY"))).isDisplayed();
-		Assert.assertEquals(City, true);
+		Assert.assertEquals(City, false);
 	}
 
 	@Test // Chose Furniture
